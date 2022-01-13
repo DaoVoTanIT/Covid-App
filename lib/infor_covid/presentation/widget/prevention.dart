@@ -1,46 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../constant.dart';
 
 class PreventionWidget extends StatelessWidget {
-//   final String image;
-//   final String title;
-// //  final String text;
-//   const PreventionWidget({
-//     Key? key,
-//     required this.image,
-//     required this.title,
-//     //required this.text,
-//   }) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Card(
-//       elevation: 1,
-//       shape: RoundedRectangleBorder(
-//         borderRadius: BorderRadius.circular(20.0),
-//       ),
-//       child: Column(
-//         crossAxisAlignment: CrossAxisAlignment.center,
-//         children: [
-//           Image.asset(
-//             image,
-//             height: 90,
-//           ),
-//           SizedBox(
-//             height: 5,
-//           ),
-//           Text(
-//             title,
-//             textAlign: TextAlign.center,
-
-//             // style: TextStyle(fontWeight: FontWeight.bold),
-//           ),
-//         ],
-//       ),
-//     );
-//   }
   final String image;
   final String title;
   final String text;
