@@ -1,6 +1,7 @@
 import 'package:covidapp/home/data/model/county.dart';
 import 'package:covidapp/home/data/service/covid_service.dart';
-import 'package:covidapp/home/presentation/screen/search.dart';
+import 'package:covidapp/home/presentation/screen/covid_search_country.dart';
+import 'package:covidapp/home/presentation/screen/covid_global.dart';
 import 'package:covidapp/home/presentation/widget/header_widget.dart';
 import 'package:flutter/material.dart';
 import '../../../constant.dart';
@@ -82,36 +83,7 @@ class _HomeInforState extends State<HomeInfor> {
                   SizedBox(height: 20),
                   InforCovid(),
                   SizedBox(height: 20),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text(
-                        "Biểu đồ tổng số ca mắc covid-19",
-                        style: kTitleTextstyle,
-                      ),
-                    ],
-                  ),
-                  Container(
-                    margin: EdgeInsets.only(top: 20),
-                    padding: EdgeInsets.all(20),
-                    height: 178,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white,
-                      boxShadow: [
-                        BoxShadow(
-                          offset: Offset(0, 10),
-                          blurRadius: 30,
-                          color: kShadowColor,
-                        ),
-                      ],
-                    ),
-                    child: Image.asset(
-                      "assets/images/map.png",
-                      fit: BoxFit.contain,
-                    ),
-                  ),
+                  CovidGlobal()
                 ],
               ),
             ),
