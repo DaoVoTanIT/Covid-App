@@ -1,8 +1,6 @@
 import 'package:covidapp/home/data/model/global.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:timeago/timeago.dart' as timeago;
-
 import '../../../constant.dart';
 
 class GlobalStatistics extends StatelessWidget {
