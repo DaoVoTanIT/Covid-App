@@ -1,8 +1,10 @@
 import 'package:covidapp/home/presentation/widget/header_widget.dart';
+import 'package:covidapp/infor_covid/data/domain/asked_question_covid.dart';
+import 'package:covidapp/infor_covid/presentation/widget/askaboutcovid.dart';
 import 'package:covidapp/infor_covid/presentation/widget/prevention.dart';
 import 'package:covidapp/infor_covid/presentation/widget/symptom.dart';
 import 'package:flutter/material.dart';
-
+import 'package:url_launcher/url_launcher.dart';
 import '../../../constant.dart';
 
 class Information extends StatefulWidget {
@@ -15,9 +17,10 @@ class Information extends StatefulWidget {
 class _InformationState extends State<Information> {
   final controller = ScrollController();
   double offset = 0;
+  final numberBYT = '19009095';
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     controller.addListener(onScroll);
   }
@@ -38,6 +41,18 @@ class _InformationState extends State<Information> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: IconButton(
+          icon: Icon(Icons.phone),
+          onPressed: () async {
+            // setState(() {
+            //   _makePhoneCall('tel:0597924917');
+            // });
+            launch('tel://$numberBYT');
+          },
+        ),
+      ),
       body: SingleChildScrollView(
         controller: controller,
         child: Column(
@@ -93,29 +108,68 @@ class _InformationState extends State<Information> {
                       ],
                     ),
                   ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  Row(
+                    children: <Widget>[
+                      RichText(
+                        text: TextSpan(
+                          children: [
+                            TextSpan(
+                              text: "Phòng ngừa",
+                              style: kTitleTextstyle,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Spacer(),
+                      Text(
+                        "Quy tắc 5k(Bộ y tế)",
+                        style: TextStyle(
+                          color: kPrimaryColor,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                    ],
+                  ),
+                  PreventionWidget(
+                      image: "assets/images/face_mask.png",
+                      title: "khẩu trang",
+                      text:
+                          "Rửa tay thường xuyên bằng xà phòng hoặc dung dịch sát khuẩn tay. Vệ sinh các bề mặt/ vật dụng thường xuyên tiếp xúc."),
+                  PreventionWidget(
+                      image: "assets/images/wash_hands.png",
+                      title: "Khử khuẩn",
+                      text:
+                          "Đeo khẩu trang vải thường xuyên tại nơi công cộng, nơi tập trung đông người; đeo khẩu trang y tế tại các cơ sở y tế, khu cách ly."),
+                  PreventionWidget(
+                      image: "assets/images/avoid_contact.png",
+                      title: "Khoảng cách",
+                      text: "Giữ khoảng cách khi tiếp xúc với người khác."),
+                  PreventionWidget(
+                      image: "assets/images/cover_cough.png",
+                      title: "Không đưa tay lên mặt",
+                      text:
+                          "Khai báo y tế trên App NCOVI; cài đặt ứng dụng BlueZone tại địa chỉ https://www.bluezone.gov.vn để được cảnh báo nguy cơ lây nhiễm COVID-19."),
+
+                  //ListTile(title: askQuestionCovid.,)
+                  // ExpansionPanel()
+                  //  ExpansionPanelList(
+                  //     animationDuration: const Duration(seconds: 2),
+                  //     expandedHeaderPadding: EdgeInsets.all(10),
+                  //     dividerColor: Colors.red,
+                  //     elevation: 4,
+                  //     expansionCallback: (int index, bool isExpanded) {
+                  //       setState(() {
+                  //         listAskaboutCovid[index].isExpanded = !isExpanded;
+                  //       });
+                  //     },
+                  //     children: buildExpansionPanel(askQuestionCovid!.toList());
+                  //   ),
                 ],
               ),
             ),
-            SizedBox(height: 20),
-            Text("Prevention", style: kTitleTextstyle),
-            PreventionWidget(
-                image: "assets/images/wash_hands.png",
-                title: "Rửa tay",
-                text:
-                    "Rửa tay thường xuyên bằng xà phòng hoặc dung dịch sát khuẩn tay."),
-            PreventionWidget(
-                image: "assets/images/face_mask.png",
-                title: "khẩu trang",
-                text: "Rửa tay kĩ"),
-            PreventionWidget(
-                image: "assets/images/avoid_contact.png",
-                title: "Khoảng cách",
-                text: "Rửa tay kĩ"),
-            PreventionWidget(
-                image: "assets/images/cover_cough.png",
-                title: "Không đưa tay lên mặt",
-                text: "Rửa tay kĩ"),
-            SizedBox(height: 50),
           ],
         ),
       ),
