@@ -1,3 +1,4 @@
+import 'package:covidapp/country/presentation/screen/covid_country_detail.dart';
 import 'package:covidapp/home/presentation/screen/home.dart';
 import 'package:covidapp/infor_covid/presentation/screen/information.dart';
 import 'package:flutter/material.dart';
@@ -11,13 +12,12 @@ class TabBarNavigation extends StatefulWidget {
 
 class _TabBarNavigationState extends State {
   final GlobalKey _navKey = GlobalKey();
-
+  var myindex = 0;
   var pagesAll = [
     HomeInfor(),
+    CovidCountryDetail(),
     Information(),
   ];
-
-  var myindex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -38,6 +38,15 @@ class _TabBarNavigationState extends State {
           ),
           BottomNavigationBarItem(
             icon: myindex == 1
+                ? Image.asset('assets/images/tab2.png', color: Colors.green)
+                : Image.asset(
+                    'assets/images/tab2.png',
+                  ),
+            //icon: Icon((myindex == 0) ? Icons.home_outlined : Icons.home),
+            label: "Đất nước",
+          ),
+          BottomNavigationBarItem(
+            icon: myindex == 2
                 ? Image.asset('assets/images/tab2.png', color: Colors.green)
                 : Image.asset(
                     'assets/images/tab2.png',
