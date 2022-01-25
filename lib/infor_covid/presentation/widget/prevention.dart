@@ -41,15 +41,16 @@ class PreventionWidget extends StatelessWidget {
               image,
               scale: 2,
             ),
-            SizedBox(
-              width: 10,
-            ),
+            // SizedBox(
+            //   width: 10,
+            // ),
+            Spacer(),
             Positioned(
-              left: 130,
+              left: 140,
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                height: 136,
-                width: MediaQuery.of(context).size.width - 170,
+                height: 140,
+                width: MediaQuery.of(context).size.width - 165,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,14 +58,14 @@ class PreventionWidget extends StatelessWidget {
                     Text(
                       title,
                       style: kTitleTextstyle.copyWith(
-                        fontSize: 16,
+                        fontSize: 15,
                       ),
                     ),
                     Expanded(
                       child: Text(
                         text,
-                        maxLines: 4,
-                        overflow: TextOverflow.ellipsis,
+                        //maxLines: 4,
+                        // overflow: TextOverflow.ellipsis,
                         style: TextStyle(
                           fontSize: 12,
                         ),
