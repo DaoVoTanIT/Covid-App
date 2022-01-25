@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:covidapp/home/data/model/global.dart';
 import 'package:http/http.dart' as http;
 import 'package:covidapp/home/data/model/country_summary.dart';
-import 'package:covidapp/home/data/model/county.dart';
+import 'package:covidapp/home/data/model/country.dart';
 
 class CovidService {
   Future<GlobalSummaryModel> getGlobalSummary() async {
