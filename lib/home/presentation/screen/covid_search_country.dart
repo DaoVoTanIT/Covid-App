@@ -1,5 +1,5 @@
 import 'package:covidapp/home/data/model/country_summary.dart';
-import 'package:covidapp/home/data/model/county.dart';
+import 'package:covidapp/home/data/model/country.dart';
 import 'package:covidapp/home/data/service/covid_service.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_typeahead/flutter_typeahead.dart';
