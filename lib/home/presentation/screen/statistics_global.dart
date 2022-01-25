@@ -1,13 +1,18 @@
-import 'package:covidapp/home/data/model/global.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+
+import 'package:covidapp/home/data/model/global.dart';
+
 import '../../../constant.dart';
 
 class GlobalStatistics extends StatelessWidget {
   final GlobalSummaryModel summary;
   DateFormat dateFormat = DateFormat("yyyy-MM-dd HH:mm");
 
-  GlobalStatistics({Key? key, required this.summary}) : super(key: key);
+  GlobalStatistics({
+    Key? key,
+    required this.summary,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
