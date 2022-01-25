@@ -1,4 +1,4 @@
-import 'package:covidapp/home/data/model/county.dart';
+import 'package:covidapp/home/data/model/country.dart';
 import 'package:covidapp/home/data/service/covid_service.dart';
 import 'package:covidapp/home/presentation/screen/covid_search_country.dart';
 import 'package:covidapp/home/presentation/screen/covid_global.dart';
