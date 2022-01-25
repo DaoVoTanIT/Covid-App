@@ -1,3 +1,5 @@
+import 'package:covidapp/country/presentation/screen/countryInfor.dart';
+import 'package:covidapp/country/presentation/screen/covid_country_detail.dart';
 import 'package:covidapp/infor_covid/presentation/screen/information.dart';
 import 'package:flutter/material.dart';
 
@@ -8,10 +10,10 @@ class Routers {
     switch (settings.name) {
       case 'home':
         return MaterialPageRoute(builder: (context) => TabBarNavigation());
-      case 'LoginPage':
+      case 'information':
         return MaterialPageRoute(builder: (context) => Information());
-      // case 'SignUpPage':
-      //   return MaterialPageRoute(builder: (context) => SignUpPage());
+      case 'country':
+        return MaterialPageRoute(builder: (context) => InforCovidCountry());
       // case 'CurvedNavigationBarWidget':
       //   return MaterialPageRoute(
       //       builder: (context) => CurvedNavigationBarWidget());
