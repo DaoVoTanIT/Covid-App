@@ -54,7 +54,6 @@ class _StatisticsCovidCountryState extends State<StatisticsCovidCountry> {
                               child: Text(
                                 widget.summaryList.countries[index].country,
                                 overflow: TextOverflow.fade,
-                                maxLines: 1,
                                 softWrap: false,
                                 style: kHeadingTextStyle.copyWith(
                                   fontSize: 15,
