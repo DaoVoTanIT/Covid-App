@@ -37,9 +37,10 @@ class _TabBarNavigationState extends State {
           ),
           BottomNavigationBarItem(
             icon: myindex == 1
-                ? Image.asset('assets/images/tab2.png', color: Colors.green)
+                ? Image.asset('assets/images/worldwide.png',
+                    color: Colors.green)
                 : Image.asset(
-                    'assets/images/tab2.png',
+                    'assets/images/worldwide.png',
                   ),
             label: "Đất nước",
           ),
