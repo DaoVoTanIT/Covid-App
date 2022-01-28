@@ -33,7 +33,6 @@ class _TabBarNavigationState extends State {
                 : Image.asset(
                     'assets/images/tab1.png',
                   ),
-            //icon: Icon((myindex == 0) ? Icons.home_outlined : Icons.home),
             label: "Trang chủ",
           ),
           BottomNavigationBarItem(
@@ -42,7 +41,6 @@ class _TabBarNavigationState extends State {
                 : Image.asset(
                     'assets/images/tab2.png',
                   ),
-            //icon: Icon((myindex == 0) ? Icons.home_outlined : Icons.home),
             label: "Đất nước",
           ),
           BottomNavigationBarItem(
@@ -51,15 +49,8 @@ class _TabBarNavigationState extends State {
                 : Image.asset(
                     'assets/images/tab2.png',
                   ),
-            //icon: Icon((myindex == 0) ? Icons.home_outlined : Icons.home),
             label: "Thông tin",
           ),
-
-          // Icon((myindex == 0) ? Icons.home_outlined : Icons.home),
-          // Icon((myindex == 1) ? Icons.map : Icons.map_outlined),
-          // Icon((myindex == 2) ? Icons.add : Icons.add),
-          // Icon((myindex == 3) ? Icons.favorite_border : Icons.favorite),
-          // Icon((myindex == 4) ? Icons.people : Icons.people_alt)
         ],
         onTap: (index) {
           setState(() {
