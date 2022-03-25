@@ -1,5 +1,4 @@
 import 'package:covidapp/home/presentation/widget/header_widget.dart';
-import 'package:covidapp/infor_covid/data/domain/asked_question_covid.dart';
 import 'package:covidapp/infor_covid/presentation/widget/askaboutcovid.dart';
 import 'package:covidapp/infor_covid/presentation/widget/prevention.dart';
 import 'package:covidapp/infor_covid/presentation/widget/symptom.dart';
@@ -152,24 +151,10 @@ class _InformationState extends State<Information> {
                       title: "Không đưa tay lên mặt",
                       text:
                           "Khai báo y tế trên App NCOVI; cài đặt ứng dụng BlueZone tại địa chỉ https://www.bluezone.gov.vn để được cảnh báo nguy cơ lây nhiễm COVID-19."),
-
-                  //ListTile(title: askQuestionCovid.,)
-                  // ExpansionPanel()
-                  //  ExpansionPanelList(
-                  //     animationDuration: const Duration(seconds: 2),
-                  //     expandedHeaderPadding: EdgeInsets.all(10),
-                  //     dividerColor: Colors.red,
-                  //     elevation: 4,
-                  //     expansionCallback: (int index, bool isExpanded) {
-                  //       setState(() {
-                  //         listAskaboutCovid[index].isExpanded = !isExpanded;
-                  //       });
-                  //     },
-                  //     children: buildExpansionPanel(askQuestionCovid!.toList());
-                  //   ),
                 ],
               ),
             ),
+            FAQPage()
           ],
         ),
       ),
