@@ -83,7 +83,7 @@ class _HomeInforState extends State<HomeInfor> {
                   SizedBox(height: 20),
                   InforCovid(),
                   SizedBox(height: 20),
-                  CovidGlobal()
+                  CovidGlobal(),
                 ],
               ),
             ),
