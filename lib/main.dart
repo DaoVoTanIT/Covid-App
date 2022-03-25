@@ -1,4 +1,3 @@
-import 'package:covidapp/home/presentation/screen/home.dart';
 import 'package:covidapp/tab/presentation/screen/routes/router.dart';
 import 'package:flutter/material.dart';
 
@@ -11,6 +10,8 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //set up router
-      initialRoute: RouteName.home,
+      initialRoute: RouteName.splash,
       onGenerateRoute: Routers.generateRoute,
     );
   }
