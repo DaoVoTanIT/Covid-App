@@ -1,6 +1,7 @@
 import 'package:covidapp/country/presentation/screen/covid_country_detail.dart';
 import 'package:covidapp/home/presentation/screen/home.dart';
 import 'package:covidapp/infor_covid/presentation/screen/information.dart';
+import 'package:covidapp/readnews/presentation/screen/readnews.dart';
 import 'package:flutter/material.dart';
 
 class TabBarNavigation extends StatefulWidget {
@@ -17,6 +18,7 @@ class _TabBarNavigationState extends State {
     HomeInfor(),
     CovidCountryDetail(),
     Information(),
+    ReadNews(),
   ];
 
   @override
@@ -49,6 +51,14 @@ class _TabBarNavigationState extends State {
                 ? Image.asset('assets/images/tab2.png', color: Colors.green)
                 : Image.asset(
                     'assets/images/tab2.png',
+                  ),
+            label: "Thông tin",
+          ),
+          BottomNavigationBarItem(
+            icon: myindex == 3
+                ? Image.asset('assets/images/news.png', color: Colors.green)
+                : Image.asset(
+                    'assets/images/news.png',
                   ),
             label: "Thông tin",
           ),
